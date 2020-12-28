@@ -6,8 +6,8 @@
     "من در حال حاضر در حال کار کردن روی یک فروشگاه آنلاین سفارش غذا هستم."
   ],
   "img": [
-      "./src/asset/img/square-dark.png",
-      "./src/asset/img/square.png"
+      "./asset/img/square-dark.png",
+      "./asset/img/square.png"
   ],
   "social": [
     {

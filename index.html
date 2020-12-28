@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./src/asset/font/font.css" />
+    <link rel="stylesheet" href="./asset/font/font.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <script src="./src/js/fontawesome.min.js"></script>
     <script src="./src/js/jQuery.js"></script>
@@ -42,7 +42,7 @@
     </script>
     <script>
       $(document).ready(function () {
-        $.getJSON("./src/json/data.json", function (res) {
+        $.getJSON("./src/data/profile.json", function (res) {
           var template = $("#template").html();
           var data = { user: res };
           var html = ejs.render(template, data);
