@@ -1,0 +1,8 @@
+{
+    "name": "حامد یاقوتی",
+    "social": [
+        {"url": "http://www.instagram.com/mr_yaghooti", "icon": "fab fa-instagram"},
+        {"url": "https://github.com/hamedyaghouti", "icon": "fab fa-github"},
+        {"url": "https://www.linkedin.com/in/hamed-yaghooti-361b13198", "icon": "fab fa-linkedin-in"}
+    ]
+}

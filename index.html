@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./src/asset/font/font.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="./src/js/fontawesome.min.js"></script>
+    <script src="./src/js/jQuery.js"></script>
+    <script src="./src/js/ejs/ejs.js"></script>
+    <title>حامد یاقوتی</title>
+  </head>
+  <body>
+    <div id="root" class="container-lg"></div>
+
+    <script id="template" type="text/x-ejs-template">
+      <div
+        class="about d-flex justify-content-between mx-auto position-relative"
+      >
+        <div class="bio">
+          <h1><%=user.name%></h1>
+          <p>
+            👋 من یک توسعه دهنده سمت کاربر هستم که در حال حاضر به صورت فریلنسر
+            کار می کنم. پیش از این در استارتاپ پادرو که یک پلتفرم هوشمند ارسال
+            کالا هست مشغول به کار بودم.
+          </p>
+          <p>علاقه مند به بازی های رومیزی، پیاده روی و بازی DOTA2 هستم.</p>
+          <p>
+            من در حال حاضر در حال کار کردن روی یک فروشگاه آنلاین سفارش غذا هستم.
+          </p>
+        </div>
+        <div class="image d-none d-sm-block">
+          <img class="shape-top" src="./src/asset/img/square-dark.png" />
+          <img
+            class="shape-bot position-absolute"
+            src="./src/asset/img/square.png"
+          />
+        </div>
+      </div>
+      <div class="contact d-flex">
+        <% user.social.forEach(function(item){ %>
+          <a href=<%=item.url%> target="_blank">
+            <i class='<%=item.icon%>'></i>
+          </a>
+        <% }); %>
+      </div>
+    </script>
+    <script>
+      $(document).ready(function () {
+        $.getJSON("./src/json/data.json", function (res) {
+          var template = $("#template").html();
+          var data = { user: res };
+          var html = ejs.render(template, data);
+          document.getElementById("root").innerHTML = html;
+        });
+      });
+    </script>
+  </body>
+</html>
