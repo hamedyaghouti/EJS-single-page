@@ -20,20 +20,20 @@
       >
         <div class="bio">
           <h1><%=user.name%></h1>
-          <% user.biography.forEach(function(item){ %>
+          <% user.about.content.forEach(function(item){ %>
             <p><%= item %></p>
           <% }); %>
         </div>
         <div class="image d-none d-sm-block">
-          <img class="shape-top" src="<%= user.img[0]%>" />
+          <img class="shape-top" src="<%= user.about.img[0]%>" />
           <img
             class="shape-bot position-absolute"
-            src="<%= user.img[1]%>"
+            src="<%= user.about.img[1]%>"
           />
         </div>
       </div>
       <div class="contact d-flex">
-        <% user.social.forEach(function(item){ %>
+        <% user.contact.social.forEach(function(item){ %>
           <a href=<%=item.url%> target="_blank">
             <i class='<%=item.icon%>'></i>
           </a>
